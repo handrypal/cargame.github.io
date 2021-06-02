@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" content="width=device-width, initial-scale=1.0">
+    <title> play till 5 minuteus</title>
+    <style>
+    body{
+      margin:0;
+      padding:0;
+      background-color:#0089ff57;
+    }
+      .game-area{
+        background-image: url("highway.jpg");
+        background-size: cover;
+        width:50%;
+        height:100vh;
+        margin:auto;
+      }
+      .user-car-right{
+        position:absolute;
+        margin-top:80vh;
+        margin-left:95px;
+        position:fixed;
+      }
+      .user-car-left{
+        positio:absolute;
+        margin-top:80vh;
+        margin-left:460px;
+        position:fixed;
+      }
+      .computer-car{
+        position: fixed;
+        padding: 160px;
+        padding-top:00 ;
+        animation:carmoving linear 50s infinite;
+      }
+      @keyframes carmoving {
+
+        100%{ padding-top:100vh;}
+
+      }
+      .computer-caar{
+        position: fixed;
+        padding: 480px;
+        padding-top:00;
+        animation:carmoving linear 3s infinite;
+      }
+
+
+      .car1{
+      position:fixed;
+       margin:100px;
+        margin-top:0;
+       animation:carmoving linear 2s infinite;
+     }
+      @keyframes carmoving {
+        100%{ padding-top:100vh;}
+      }
+    </style>
+  </head>
+  <body>
+
+<div class="game-area">
+<img src="computercar2.png" alt=""width="50px" id="car1" class="car1">
+
+<img src="car.png" alt="" class="user-car-right" width="70px" id="usercar" style="">
+<img src="computercar2.png" alt=""width="50px" id="car2"style="position:fixed;margin-left:500px;animation:carmoving linear 5s infinite;">
+<h1 style=" position:fixed; font-size:50px; place-items:center; color:black; margin:0; background:#03f3ff91;width:685px; font-family:Chiller;"><center>Wrong Side Driving</center></h1>
+
+<button type="button" name="button"onclick="left()"  style="position:fixed;  width:300px;margin-left:0px; height:100vh ; border: 0px;color:black; background:#03f3ff00;"></button>
+<button type="button" name="button"onclick="right()" style="position:fixed; width:300px; height:100vh;margin-left:420px; border:0px;color:black; background:#03f3ff00;"></button>
+
+</div>
+<script type="text/javascript">
+var element=document.getElementById("car2").style.padding-top;
+function right(){
+ document.getElementById("usercar").setAttribute("class","user-car-left");
+ var a =2;
+ console.log(a);
+}
+function left(){
+ document.getElementById("usercar").setAttribute("class","user-car-right");
+ var a =1;
+ console.log(a);
+}
+console.log(element)
+</script>
+  </body>
+</html>
